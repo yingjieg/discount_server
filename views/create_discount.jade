@@ -1,0 +1,63 @@
+doctype html
+html(lang='en')
+  head
+    title Jade
+    style(type='text/css').
+      label {
+      display: inline-block;
+      width: 160px;
+      text-align: right;
+      }
+      ul li {
+      list-style: none;
+      }
+  body
+    h1 Create Discount information
+    #container.col
+      form(action='', method='post')
+        ul
+          li
+            label(for='discount_name') Name:
+            input#discount_name(type='text', name='discount_name')
+          li
+            label(for='location') Location:
+            input#location(type='text', name='location')
+          li
+            label(for='category') Category:
+            select#category(name='category')
+              option(value='Dining') Dining
+              option(value='Hotel') Hotel
+              option(value='Life') Life Style
+              option(value='Gifts') Gifts
+          li
+            label(for='description') Description:
+            textarea#description(name='description', cols='40', rows='5')
+          li
+            label(for='promotion_time_frame') Promotion Time Frame:
+            input#promotion_time_frame(type='text', name='promotion_time_frame')
+          li
+            label(for='terms_and_conditons') Terms and Conditions:
+            input#terms_and_conditions(type='text', name='terms_and_conditons')
+          li
+            label(for='website') Website:
+            input#website(type='text', name='website')
+          li
+            label(for='phone') Phone:
+            input#phone(type='text', name='phone')
+          li
+            label(for='gps_x') GPS-x:
+            input#gps_x(type='text', name='gps_x')
+          li
+            label(for='gps_y') GPS-y:
+            input#gps_y(type='text', name='gps_y')
+          li
+            label(for='image_root') Image-root:
+            input#image_root(type='text', name='image_root')
+          li
+            label(for='image_files') Image-files:
+            input#image_files(type='text', name='image_files')
+          
+      button#create Submit
+    script(type='text/javascript', src='http://ajax.aspnetcdn.com/ajax/jquery/jquery-2.1.4.min.js')
+    script(type='text/javascript', src='/javascripts/create_discount.js')
+
